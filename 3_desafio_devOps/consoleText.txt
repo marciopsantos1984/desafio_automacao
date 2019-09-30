@@ -1,0 +1,90 @@
+Iniciado pelo usu�rio admin
+Running as SYSTEM
+Construindo no workspace C:\Program Files (x86)\Jenkins\workspace\desafio_devops
+[desafio_devops] $ cmd /c call C:\Windows\TEMP\jenkins1479820544487089773.bat
+
+C:\Program Files (x86)\Jenkins\workspace\desafio_devops>cd \ 
+
+C:\>cd desafio\1_desafio_website 
+
+C:\desafio\1_desafio_website>cucumber
+*** WARNING: You must use ANSICON 1.31 or higher (https://github.com/adoxa/ansicon/) to get coloured output on Windows
+2019-09-30 16:23:45 WARN Selenium [DEPRECATION] Selenium::WebDriver::Chrome#driver_path= is deprecated. Use Selenium::WebDriver::Chrome::Service#driver_path= instead.
+# language: pt
+Funcionalidade: Criar um usuário e realizar login, criar a “task” e depois visualizar.
+    Eu quero criar um usuário e realizar login, criar a “task” e depois visualizar.
+    A fim de testar o website .
+
+  Cenário: criando usuário no WebSite                 # features/specifications/cria_conta.feature:5
+    Dado o WebSite                                    # features/step_definitions/cria_conta.rb:7
+    Quando apresentar o campo Ok, I wanna sign up now # features/step_definitions/cria_conta.rb:14
+    E Acionar o campo Ok, I wanna sign up now         # features/step_definitions/cria_conta.rb:18
+    E apresentar o campo Name                         # features/step_definitions/cria_conta.rb:22
+    E Preencher os campos e acionar o comando Save    # features/step_definitions/cria_conta.rb:26
+    Então o WebSite irá exibir a tela inicial.        # features/step_definitions/cria_conta.rb:43
+
+  Cenário: realizando login do usuário no WebSite     # features/specifications/cria_conta.feature:12
+    Dado o WebSite                                    # features/step_definitions/cria_conta.rb:7
+    Quando apresentar o campo Sign in                 # features/step_definitions/cria_conta.rb:53
+    E Acionar o campo Sign in                         # features/step_definitions/cria_conta.rb:57
+    E apresentar o campo login                        # features/step_definitions/cria_conta.rb:61
+    E Preencher os campos e acionar o comando Sign in # features/step_definitions/cria_conta.rb:65
+    Então o WebSite Irá exibir a tela inicial.        # features/step_definitions/cria_conta.rb:77
+
+  Cenário: criando a "task" no WebSite                     # features/specifications/cria_conta.feature:19
+    Dado a tela inicial o WebSite                          # features/step_definitions/cria_conta.rb:87
+    Quando apresentar o campo Let's add some tasks!        # features/step_definitions/cria_conta.rb:105
+    E Acionar o campo  Let's add some tasks!               # features/step_definitions/cria_conta.rb:109
+    E Apresentar o campo +Add a task                       # features/step_definitions/cria_conta.rb:113
+    E Acionar o campo +Add a task                          # features/step_definitions/cria_conta.rb:117
+    E apresentar o campo title                             # features/step_definitions/cria_conta.rb:121
+    E Preencher os campos da task e acionar o comando Save # features/step_definitions/cria_conta.rb:125
+    Então o WebSite irá exibir a tela.                     # features/step_definitions/cria_conta.rb:144
+
+  Cenário: visualizando a "task" no WebSite         # features/specifications/cria_conta.feature:28
+    Dado a tela inicial o WebSite                   # features/step_definitions/cria_conta.rb:87
+    Quando apresentar o campo Let's add some tasks! # features/step_definitions/cria_conta.rb:105
+    E Acionar o campo  Let's add some tasks!        # features/step_definitions/cria_conta.rb:109
+    Então o WebSite irá exibir a tela com a task.   # features/step_definitions/cria_conta.rb:155
+
+4 scenarios (4 passed)
+24 steps (24 passed)
+0m38.342s
+[desafio_devops] $ cmd /c call C:\Windows\TEMP\jenkins601248548249873547.bat
+
+C:\Program Files (x86)\Jenkins\workspace\desafio_devops>cd \ 
+
+C:\>cd desafio\2_desafio_webservice 
+
+C:\desafio\2_desafio_webservice>cucumber
+*** WARNING: You must use ANSICON 1.31 or higher (https://github.com/adoxa/ansicon/) to get coloured output on Windows
+# language: pt
+Funcionalidade: Obter lista de filmess através da API
+    Eu quero obter através da API lista dos filmess
+    A fim de testar a API
+
+  Cenário: fazer requisição na API                                                                            # features/specifications/teste_api.feature:5
+    Dado o endereço da API para obter a lista de filmes                                                       # features/step_definitions/teste_api.rb:1
+    Quando realizar uma requisição da lista de filmes                                                         # features/step_definitions/teste_api.rb:5
+    E obter retorno da API                                                                                    # features/step_definitions/teste_api.rb:9
+      code APi 200
+      message OK
+      count 7
+    E exibir o titulo de cada elemento da lista                                                               # features/step_definitions/teste_api.rb:15
+      titulo 1 - A New Hope
+      titulo 2 - Attack of the Clones
+      titulo 3 - The Phantom Menace
+      titulo 4 - Revenge of the Sith
+      titulo 5 - Return of the Jedi
+      titulo 6 - The Empire Strikes Back
+      titulo 7 - The Force Awakens
+    Então exibir o titulo de cada elemento da lista que tenham George Lucas como diretor e que Rick McCallum. # features/step_definitions/teste_api.rb:24
+      titulo 1 - A New Hope
+      titulo 2 - Attack of the Clones
+      titulo 3 - The Phantom Menace
+      titulo 4 - Revenge of the Sith
+
+1 scenario (1 passed)
+5 steps (5 passed)
+0m1.669s
+Finished: SUCCESS
