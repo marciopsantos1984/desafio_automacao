@@ -22,6 +22,7 @@ Instalação via Console/Prompt
 		c) Para instalar Bundle   digite : gem install bundle
 	
 Execução dos Testes
+
 	a) Faça o download da pasta desafio_automacao
 	b) Acesse o Console/Prompt:
 		i) Para executar o teste acesso a pasta raiz 1_desafio_website e digite cucumber
