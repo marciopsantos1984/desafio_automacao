@@ -1,4 +1,4 @@
-# desafio_automacao
+# desafio_QA
 
 Instalando Ruby
 
